@@ -1,0 +1,388 @@
+#tabs {
+	width: 100%;
+}
+
+.ui-tabs .ui-tabs-nav {
+	text-align: center;
+}
+
+.ui-tabs .ui-tabs-nav li {
+	float: none !important;
+	display: inline-block;
+}
+
+#createAllFilmsDescription {
+	font-family: calibri;
+	font-size: 30px;
+	text-align: center;
+	text-decoration: none;
+}
+
+#createAllFilms-msg {
+	font-family: calibri;
+	font-size: 30px;
+	color: red;
+	text-decoration: underline;
+}
+
+#createAllFilms-button {
+	background-color: #66B734;
+	border-radius: 15px;
+	width: 235px;
+	color: white;
+	font-weight: bold;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 15px;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+fieldset {
+	width: 95%;
+	border-radius: 15px;
+}
+
+.crudHeadings {
+	font-family: calibri;
+	font-size: 23px;
+	font-weight: bold;
+}
+
+.functionalityLists {
+	font-family: calibri;
+	font-size: 20px;
+	text-align: left;
+	margin-left: 50px;
+	margin-right: 50px;
+}
+
+#mainHeading {
+	font-family: calibri;
+	font-size: 45px;
+	text-align: center;
+	color: blue;
+	text-decoration: underline;
+}
+
+.sectionLabels {
+	font-family: calibri;
+	font-size: 42px;
+	text-align: center;
+	color: red;
+	text-decoration: underline;
+}
+
+.subHeadings {
+	font-family: calibri;
+	font-size: 30px;
+	text-align: center;
+	text-decoration: underline;
+}
+
+.sectionHeadings {
+	font-family: calibri;
+	font-size: 25px;
+	text-align: center;
+	text-decoration: underline;
+}
+
+#get-All-Films-text-msg {
+	font-family: calibri;
+	font-size: 30px;
+	color: red;
+	text-decoration: underline;
+}
+
+#get-All-Films-json-msg {
+	font-family: calibri;
+	font-size: 30px;
+	color: red;
+	text-decoration: underline;
+}
+
+#get-All-Films-xml-msg {
+	font-family: calibri;
+	font-size: 30px;
+	color: red;
+	text-decoration: underline;
+}
+
+#get-Film-Text-msg {
+	font-family: calibri;
+	font-size: 30px;
+	color: red;
+	text-decoration: underline;
+}
+
+#get-Film-json-msg {
+	font-family: calibri;
+	font-size: 30px;
+	color: red;
+	text-decoration: underline;
+}
+
+#get-Film-xml-msg {
+	font-family: calibri;
+	font-size: 30px;
+	color: red;
+	text-decoration: underline;
+}
+
+#get-jurassic-text-msg {
+	font-family: calibri;
+	font-size: 30px;
+	color: red;
+	text-decoration: underline;
+}
+
+#get-jurassic-json-msg {
+	font-family: calibri;
+	font-size: 30px;
+	color: red;
+	text-decoration: underline;
+}
+
+#get-jurassic-xml-msg {
+	font-family: calibri;
+	font-size: 30px;
+	color: red;
+	text-decoration: underline;
+}
+
+#delete-film-msg {
+	font-family: calibri;
+	font-size: 30px;
+	color: red;
+	text-decoration: underline;
+}
+
+.insertInputs {
+	display: inline;
+	width: 145px;
+	margin-right: 10px;
+}
+
+.insertForms {
+	
+}
+
+.insertHeadings {
+	font-size: 25px;
+	font-family: calibri;
+	font-weight: bold;
+}
+
+#insertReviewText {
+	width: 1023px;
+}
+
+#insert-film-text-msg {
+	font-family: calibri;
+	font-size: 30px;
+	color: black;
+	text-decoration: none;
+}
+
+button {
+	background-color: #66B734;
+	border-radius: 15px;
+	width: 225px;
+	color: white;
+	font-weight: bold;
+	padding: 15px 25px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 15px;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+#insertFilm-button {
+	background-color: #66B734;
+	border-radius: 15px;
+	width: 225px;
+	color: white;
+	font-weight: bold;
+	padding: 15px 25px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 15px;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+#delete-film-button {
+	background-color: #66B734;
+	border-radius: 15px;
+	width: 225px;
+	color: white;
+	font-weight: bold;
+	padding: 15px 25px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 15px;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+#getAllFilms-text-button {
+	background-color: #66B734;
+	border-radius: 15px;
+	width: 225px;
+	color: white;
+	font-weight: bold;
+	padding: 15px 25px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 15px;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+#getAllFilms-json-button {
+	background-color: #66B734;
+	border-radius: 15px;
+	width: 225px;
+	color: white;
+	font-weight: bold;
+	padding: 15px 25px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 15px;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+#getAllFilms-xml-button {
+	background-color: #66B734;
+	border-radius: 15px;
+	width: 225px;
+	color: white;
+	font-weight: bold;
+	padding: 15px 25px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 15px;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+#getFilm-text-button {
+	background-color: #66B734;
+	border-radius: 15px;
+	width: 225px;
+	color: white;
+	font-weight: bold;
+	padding: 15px 25px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 15px;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+#getFilm-json-button {
+	background-color: #66B734;
+	border-radius: 15px;
+	width: 225px;
+	color: white;
+	font-weight: bold;
+	padding: 15px 25px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 15px;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+#getFilm-xml-button {
+	background-color: #66B734;
+	border-radius: 15px;
+	width: 225px;
+	color: white;
+	font-weight: bold;
+	padding: 15px 25px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 15px;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+#getJurassic-text-button {
+	background-color: #66B734;
+	border-radius: 15px;
+	width: 225px;
+	color: white;
+	font-weight: bold;
+	padding: 15px 25px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 15px;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+#getJurassic-json-button {
+	background-color: #66B734;
+	border-radius: 15px;
+	width: 225px;
+	color: white;
+	font-weight: bold;
+	padding: 15px 25px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 15px;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+#getJurassic-xml-button {
+	background-color: #66B734;
+	border-radius: 15px;
+	width: 225px;
+	color: white;
+	font-weight: bold;
+	padding: 15px 25px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 15px;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+table, td {
+	border: 1px solid black;
+}
+
+th {
+	border: 1px solid black;
+	font-family: calibri, sans-serif;
+	font-size: 23px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+td {
+	font-family: calibri, sans-serif;
+	padding: 8px;
+	font-size: 17px;
+}

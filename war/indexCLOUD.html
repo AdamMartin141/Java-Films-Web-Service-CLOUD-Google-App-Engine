@@ -1,0 +1,420 @@
+<!DOCTYPE HTML> 
+
+<html>
+
+<head>
+
+<link rel="stylesheet" type = "text/css" href="CSS/style.css"/>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+<link rel="shortcut icon" href="">
+
+<script src="scripts/jQuery.js"></script>
+<script src="scripts/jQuery-ui-1.12.1.js"></script>
+<script src="scripts/jQuery-ui-1.12.4.js"></script>
+<script src="//code.jquery.com/jquery-1.12.4.js"></script>
+<script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="scripts/AJAX-jQuery-Functions.js"></script>
+
+<title> Films Database - Web Service - Google App Engine </title>
+
+
+<script>
+  $( function() {
+    $( document ).tooltip();
+  } );
+  
+  $( function() {
+	    $( "#tabs" ).tabs();
+	  } );
+</script>
+
+
+</head> 
+
+
+<body> 
+
+<div align = "center">
+
+<fieldset>
+
+<h1 id = "mainHeading"> Front-End Web Page for the 'Films' Java Database Service (Google App Engine Version): </h1>
+
+</fieldset>
+
+
+<br>
+
+
+<div id="tabs">
+  <ul>
+    <li><a href="#tabs-1">About this Page</a></li>
+    <li><a href="#tabs-2">AJAX Functionality</a></li>
+    <li><a href="#tabs-3">Non - AJAX Functionality</a></li>   
+  </ul>
+
+
+<div id = "tabs-1">
+
+<h1 class = "sectionLabels"> About this Page: </h1> 
+
+<fieldset>
+
+<h2 class = "subHeadings">This page offers the following AJAX and non-AJAX functionality: </h2>
+
+<h3 class = "sectionHeadings"> AJAX Functionality (For AJAX Film retrieval, see the console for Text, JSON
+and XML formatting evidence): </h3> 
+  
+<ul class = "functionalityLists">
+<li> A button to add a list of film records to the Google Cloud Database (using the 'createAllFilms' servlet). </li>
+<li> Buttons to retrieve all film records from the server in Text, JSON or XML format, and place them in a HTML table 
+(using the 'getAllFilms' servlet). </li>
+<li> Forms to search for an individual film record by name, retrieve it from the server in Text, JSON or XML format, 
+and place it in a HTML table (using the 'getFilm' servlet).</li>
+<li> Form to insert a new film record into the database, and display confirmation in the browser (using the 'insertFilm' servlet). </li>
+<li> Form to delete a film record from the database, and display a confirmation message in the browser window (using the 'deleteFilm' servlet). </li>
+<li> Buttons to retrieve 'The Shawshank Redemption' film record from the server in Text, JSON or XML format, and 
+place it in a HTML table (using the 'getFilm' servlet). </li>
+</ul>
+
+<h3 class = "sectionHeadings"> Non - AJAX Functionality: </h3>
+
+<ul class = "functionalityLists">
+<li> Buttons to retrieve all film records in Text, JSON and XML formats (using the 'getAllFilms' servlet). </li>
+<li> Forms to search for and retrieve individual film records in Text, JSON and XML formats (using the 'getFilm' servlet). </li>
+</ul>
+
+</fieldset>
+
+</div>
+
+
+
+
+<div id = "tabs-2">
+
+<h1 class = "sectionLabels"> AJAX Functionality: </h1>
+<h1 class = "sectionLabels"> (When retrieving data, see console for raw TEXT, JSON, XML data) </h1> 
+
+<fieldset>
+
+<h2 class = "subHeadings"> Create Film Records, and Display Confirmation in Browser: </h2>
+
+<h2 id = "createAllFilmsDescription"> If no data is being retrieved, press the below button to re -
+populate the Google Cloud Datastore with Film records (Needed if project is being run locally, 
+on 'http://localhost:8888/'): </h2>
+
+<form action = "createAllFilms">
+
+<input type="button" id = "createAllFilms-button" value="CREATE FILM RECORDS">
+
+<h2 id="createAllFilms-msg"></h2>
+
+</form>
+
+</fieldset>
+
+
+<br>
+<br>
+<br>
+
+
+<fieldset>
+
+<h2 class = "subHeadings"> AJAX Retrieval - 'Get All Films' (Text, JSON and XML Format):</h2>
+
+<h3 class = "sectionHeadings"> Get All Films (TEXT Format) </h3>
+
+<form action = "getAllFilms">
+
+<input type="button" id = "getAllFilms-text-button" value = "RETRIEVE ALL - TEXT">
+
+</form>
+
+<h2 id="get-All-Films-text-msg"></h2>
+<div id="get-All-Films-text-Div"></div>
+
+
+
+<h3 class = "sectionHeadings"> Get All Films (JSON Format) </h3>
+
+<form action = "getAllFilms">
+
+<input type="button" id = "getAllFilms-json-button" value = "RETRIEVE ALL - JSON">
+
+</form>
+
+<h2 id="get-All-Films-json-msg"></h2>
+<div id="get-All-Films-json-Div"></div>
+
+
+
+<h3 class = "sectionHeadings"> Get All Films (XML Format) </h3>
+
+<form action = "getAllFilms">
+
+<input type="button" id = "getAllFilms-xml-button" value = "RETRIEVE ALL - XML">
+
+</form>
+
+<h2 id="get-All-Films-xml-msg"></h2>
+<div id="get-All-Films-xml-Div"></div>
+
+</fieldset>
+
+
+<br>
+
+
+<fieldset>
+
+<h2 class = "subHeadings"> AJAX Retrieval - 'Search Films by Title' (Text, JSON and XML Format):</h2>
+
+<h3 class = "sectionHeadings"> Search Films by Title (Text Format) </h3>
+
+<form action = "getFilm">
+
+<input type = "text" id = "getFilm-text-query" name="title" title="Try 'Jurassic Park'">
+
+<input type="button" id = "getFilm-text-button" value = "SEARCH FILMS - TEXT">
+
+</form>
+
+<h2 id="get-Film-Text-msg"></h2>
+<div id="get-Film-Text-Div"></div>
+
+
+
+<h3 class = "sectionHeadings"> Search Films by Title (JSON Format) </h3>
+
+<form action = "getFilm">
+
+<input type = "text" id = "getFilm-json-query" name="title" title="Try 'Jurassic Park'">
+
+<input type="button" id = "getFilm-json-button" value="SEARCH FILMS - JSON">
+
+</form>
+
+<h2 id="get-Film-json-msg"></h2>
+<div id="get-Film-json-Div"></div>
+
+
+
+<h3 class = "sectionHeadings"> Search Films by Title (XML Format) </h3>
+
+<form action = "getFilm">
+
+<input type = "text" id = "getFilm-xml-query" name="title" title="Try 'Jurassic Park'">
+
+<input type="button" id = "getFilm-xml-button" value="SEARCH FILMS - XML">
+
+</form>
+
+<h2 id="get-Film-xml-msg"></h2>
+<div id="get-Film-xml-Div"></div>
+
+</fieldset>
+
+
+<br>
+
+
+<fieldset>
+
+<h2 class = "subHeadings"> AJAX Retrieval - 'Search Films by 'Jurassic Park' Title' (Text, JSON and XML Format):</h2>
+
+<h3 class = "sectionHeadings"> Retrieve 'Jurassic Park' Film Record (Text Format) </h3>
+
+<form action = "getFilm">
+
+<input type = "button" id = "getJurassic-text-button" value = "RETRIEVE FILM - TEXT">
+
+</form>
+
+<h2 id="get-jurassic-text-msg"></h2>
+<div id="get-jurassic-text-div"></div>
+
+
+
+<h3 class = "sectionHeadings"> Retrieve 'Jurassic Park' Film Record (JSON Format) </h3>
+
+<form action = "getFilm">
+
+<input type="button" id = "getJurassic-json-button" value="RETRIEVE FILM - JSON">
+
+</form>
+
+<h2 id="get-jurassic-json-msg"></h2>
+<div id="get-jurassic-json-div"></div>
+
+
+
+<h3 class = "sectionHeadings"> Retrieve 'Jurassic Park' Film Record (XML Format) </h3>
+
+<form action = "getFilm">
+
+<input type="button" id = "getJurassic-xml-button" value="RETRIEVE FILM - XML">
+
+</form>
+
+<h2 id="get-jurassic-xml-msg"></h2>
+<div id="get-jurassic-xml-div"></div>
+
+<br>
+
+</fieldset>
+
+
+<br>
+
+
+<fieldset>
+
+<h2 class = "subHeadings"> AJAX - Insert a New Film Record, and Display Confirmation in Browser: </h2>
+
+<form action = "insertFilm" class = "insertForms">
+
+<p class = insertHeadings> ID: </p> <input type="text" id="insertIDText" title="A 5-character ID number for the film record, such as '12345'">
+<p class = insertHeadings> Title: </p> <input type="text" id="insertTitleText" title="E.g. 'Trainspotting'">
+<p class = insertHeadings> Year: </p> <input type="text" id="insertYearText" title="E.g. '2005'">
+<p class = insertHeadings> Director: </p> <input type="text" id="insertDirectorText" title="E.g. 'Steven Spielberg'">
+<p class = insertHeadings> Stars: </p> <input type="text" id="insertStarsText" title="E.g. 'Dwayne Johnson'">
+<p class = insertHeadings> Review: </p> <input type="text" id="insertReviewText" title="E.g. 'An instant classic, fun for all the family'">
+
+<br><br>
+
+<input type="button" id = "insertFilm-button" value="INSERT FILM RECORD">
+
+</form>
+
+<h2 id="insert-film-text-msg"></h2>
+
+</fieldset>
+
+
+<br>
+
+
+<fieldset>
+
+<h2 class = "subHeadings"> AJAX - Delete a Film Record by ID Number, and Display Confirmation in Browser: </h2>
+
+<form action = "deleteFilm">
+
+<p class= "crudHeadings"> Enter ID Number of Film Record to Delete: </p> 
+
+<input type="text" id="deleteFilm-query" name="id" title="The ID number of the film record you would like to delete">
+
+<input type="button" id = "delete-film-button" value="DELETE FILM RECORD">
+
+</form>
+
+<h2 id="delete-film-msg"></h2>
+
+</fieldset>
+
+
+<br>
+
+
+
+
+</div>
+
+
+
+
+<div id = "tabs-3">
+
+<h1 class = "sectionLabels"> Non - AJAX Functionality: </h1> 
+
+
+<fieldset>
+
+<h2 class = "subHeadings"> Non - AJAX Data Retrieval - 'Get all Films' (Text, JSON and XML Format): </h2>
+
+<h3 class = "sectionHeadings"> Get all Film Records (Text Format) </h3>
+
+<form action = "getAllFilms">
+
+<button type="submit"> RETRIEVE ALL - TEXT </button>
+
+</form>
+
+
+<h3 class = "sectionHeadings"> Get all Film Records (JSON Format) </h3>
+
+<form action = "getAllFilms">
+
+<button type = "submit" name = "format" value = "json"> RETRIEVE ALL - JSON </button>
+
+</form>
+
+
+<h3 class = "sectionHeadings"> Get all Film Records (XML Format) </h3>
+
+<form action = "getAllFilms">
+
+<button type = "submit" name = "format" value = "xml"> RETRIEVE ALL - XML </button>
+
+</form>
+
+<br>
+
+</fieldset>
+
+
+<br>
+
+
+<fieldset>
+
+<h2 class = "subHeadings"> Non - AJAX Data Retrieval - 'Search Films by Title' (Text, JSON and XML Format):</h2>
+
+<h3 class = "sectionHeadings"> Search Films by Title (Text Format) </h3>
+
+<form action = "getFilm">
+
+<input type = "text" name="name" title="Try 'Goodfellas'">
+
+<button type="submit"> SEARCH FILMS - TEXT </button>
+
+</form>
+
+
+<h3 class = "sectionHeadings"> Search Films by Title (JSON Format) </h3>
+
+<form action = "getFilm">
+
+<input type = "text" name= "name" title="Try 'Goodfellas'">
+
+<button type = "submit" name = "format" value = "json"> SEARCH FILMS - JSON </button>
+
+</form>
+
+
+<h3 class = "sectionHeadings"> Search Films by Title (XML Format) </h3>
+
+<form action = "getFilm">
+
+<input type = "text" name="name" title="Try 'Goodfellas'">
+
+<button type = "submit" name = "format" value = "xml"> SEARCH FILMS - XML </button>
+
+</form>
+
+</fieldset>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+
+</body>
+
+</html>
